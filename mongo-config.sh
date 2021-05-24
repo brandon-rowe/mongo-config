@@ -9,3 +9,9 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 sudo systemctl status mongod
+function testMongoScript {
+    mongo <<EOF
+    db.enableFreeMonitoring()
+EOF
+}
+
